@@ -31,8 +31,9 @@ Things you may want to cover:
 |username|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group_user
-- belongs_to :message
+- has_many:groups
+- has_many:groups, through: :users_groups
+- has_many:message
 
 ## users_groupsテーブル
 |Column|Type|Options|
@@ -48,15 +49,16 @@ Things you may want to cover:
 |------|----|-------|
 |groupname|string|null: false, foreign_key: true|
 ### Association
-- belongs_to :message
-- belongs_to :user
+- has_many:message
+- has_many:users
+- has_many:users, through: :users_groups
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|null: false|
+|body|text||
 |image|string||
 ### Association
 - belongs_to :group
