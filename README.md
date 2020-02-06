@@ -26,14 +26,14 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null: false, foreign_key: true|
-|password|string|null: false, foreign_key: true|
-|username|string|null: false, foreign_key: true|
+|email|string|null: false|
+|password|string|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many:groups
+- has_many:users_groups
 - has_many:groups, through: :users_groups
-- has_many:message
+- has_many:messages
 
 ## users_groupsテーブル
 |Column|Type|Options|
@@ -47,10 +47,10 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
-- has_many:message
-- has_many:users
+- has_many:messages
+- has_many:users_groups
 - has_many:users, through: :users_groups
 
 ## messagesテーブル
