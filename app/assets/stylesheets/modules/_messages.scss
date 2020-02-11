@@ -29,11 +29,11 @@
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          &--btn1{
+          .icon-1{
             padding-right: 5px;
             color: #eeeeee;
           }
-          .icon{
+          .icon-2{
             color: #eeeeee;
           }
         }
@@ -43,15 +43,18 @@
     &__form{
       height: 100px;
       &__block{
-        padding: 20px 20px 40px 20px;
-        color: #ffffff;
-        font-weight: bold;
-        &__groupname{
-          font-size: 15px;
-          padding-bottom: 5px;
-        }
-        &__newposts{
-          font-size: 11px;
+        .group{
+          padding: 20px 20px 40px 20px;
+          font-weight: bold;
+          .groupname{
+            color: #ffffff;
+            font-size: 15px;
+            padding-bottom: 5px;
+          }
+          .newposts{
+            color: #ffffff;
+            font-size: 11px;
+          }
         }
       }
     }
