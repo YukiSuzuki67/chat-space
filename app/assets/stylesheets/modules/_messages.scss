@@ -6,12 +6,13 @@
     width: 300px;
     background-color: #2f3e51;
     float: left;
+    overflow: scroll;
     // サイドヘッダー
     &__header{
-       height: 100px;
-       background-color: #253141;
-       display: flex;
-       &__log{
+        height: 100px;
+        background-color: #253141;
+        display: flex;
+        &__log{
         margin: auto 20px;
         display: flex;
         width:260px;
@@ -37,7 +38,7 @@
             color: #eeeeee;
           }
         }
-       }
+      }
     }
     // サイドフォーム
     &__form{
@@ -73,14 +74,18 @@
       display: flex;
       justify-content: space-between;
       &__group{
-        &__name{
+        .name{
           color:#333333 ;
           font-size: 20px;
           padding:35px 0px 15px;
         }
-        &__memeber{
-          color: #999999;
-          font-size: 12px;
+        .hako{
+          display: flex;
+
+          .member{
+            color: #999999;
+            font-size: 12px;
+          }
         }
       }
       &__edit{
@@ -90,7 +95,8 @@
         margin-top: 28px;
         padding:0 20px;
         line-height: 40px;
-        &--btn{
+        &__btn{
+          display: inline-block;
           color: #38aef0;
           font-size: 16px;
           text-decoration: none;
@@ -98,70 +104,70 @@
       }
     }
     // コンテンツ
-    &__contents{
+    .messages{
       height: calc(100vh - 190px);
       background-color:#fafafa ;
       padding:35px 40px 0px 40px;
       display: flex;
       flex-direction: column;
-      &__coment{
-        &__name{
+      overflow: scroll;
+      .upper-messsage{
+        .upper-message__user-name{
           color: #333333;
           font-size: 16px;
           float: left;
-          &__posts{
-            padding:12px 0px 46px ;
-            color: #434a54;
-            font-size: 14px;
-          }
         }
-        &__days{
-          color: #999999;
-          font-size: 12px;
-          float: right;
-        }
+      }
+      .upper-message__date{
+        color: #999999;
+        font-size: 12px;
+        float: right;
+      }
+      .lower-message{
+        padding:12px 0px 46px ;
+        color: #434a54;
+        font-size: 14px;
       }
     }
+  }
     // 投稿フォーム
-    &__form{
-      height: 90px;
-      background-color: #d2d2d2;
-      padding:20px 40px;
-      
-      form{
+  .form{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding:20px 40px;
+    .input-box{
+      width:100%;
+      position: relative;
+      .field_with_errors{
+        display: contents;
+      }
+      .new_message{
         display: flex;
-
-        .input-box{
-          width:100%;
-          display: flex;
-          position: relative;
-          &__text{
+        .input-box__text{
+          padding: 0 40px 0 10px;
           height: 50px;
           width:100%;
-          border-style: none;
-          padding: 0 0px 0 10px;
-          }
-          &__image{
-            cursor:pointer;
-            font-size: 1.3rem;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            &__file{
-              display: none;
-            }
-          }
-        }
-        .submit-btn{
-          height: 50px;
-          width: 100px;
-          padding: 0 30px;
-          margin-left: 15px;
-          cursor: pointer;
-          background-color: #38aef0;
-          color: white;
         }
       }
+      .submit-btn{
+        height: 50px;
+        width: 100px;
+        padding: 0 30px;
+        margin-left: 15px;
+        cursor: pointer;
+        background-color: #38aef0;
+        color: white;
+      }
+      .icon{
+        position: absolute;
+        right: 130px;
+        top: 10px;
+        cursor:pointer;
+        font-size: 1.3rem;
+      }
+      .hidden{
+        display: none;
+      } 
     }
   }
 }
