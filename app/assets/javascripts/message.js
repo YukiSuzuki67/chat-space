@@ -22,7 +22,6 @@ $(function(){
       </div>
     </div>`
     return html;
-    // $('.messages').append(html);
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -66,7 +65,6 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
