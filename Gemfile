@@ -35,9 +35,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'unicorn', '5.4.1'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec'
 end
 
 group :development do
@@ -52,17 +57,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise'
-
-
-group :development do 
-    gem 'rspec'
-end
-
-group :test do 
-    gem 'rspec'
-end
-
 
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
@@ -73,6 +67,5 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
-group :production do
-  gem 'unicorn', '5.4.1'
-end
+
+gem 'devise'
