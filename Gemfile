@@ -63,9 +63,6 @@ group :test do
     gem 'rspec'
 end
 
-group :production do 
-    gem 'unicorn'
-end
 
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 
@@ -76,3 +73,6 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
