@@ -108,23 +108,26 @@
       height: calc(100vh - 190px);
       background-color:#fafafa ;
       padding:35px 40px 0px 40px;
-      display: flex;
       flex-direction: column;
       overflow: scroll;
-      .upper-messsage{
-        .upper-message__user-name{
-          color: #333333;
-          font-size: 16px;
-          float: left;
-        }
+      margin-bottom: 10px;
+      // display: ;
+      .upper-message__user-name{
+      color: #333333;
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
       }
       .upper-message__date{
         color: #999999;
         font-size: 12px;
-        float: right;
+        margin-left: 10px;
+        display: inline-block;
+        
       }
       .lower-message{
-        padding:12px 0px 46px ;
+        // padding:12px 0px 46px ;
+        margin-bottom: 10px;
         color: #434a54;
         font-size: 14px;
       }
