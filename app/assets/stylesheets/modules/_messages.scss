@@ -2,13 +2,13 @@
   box-sizing: border-box;
   // サイド
   .sidebar{
-    height: 100vh;
-    width: 300px;
+    // height: 100vh;
+    // width: 300px;
     background-color: #2f3e51;
     float: left;
-    overflow: scroll;
+    position: fixed;
     // サイドヘッダー
-    &__header{
+    .sidebar__header{
         height: 100px;
         background-color: #253141;
         display: flex;
@@ -41,20 +41,24 @@
       }
     }
     // サイドフォーム
-    &__form{
-      height: 100px;
-      &__block{
-        .group{
-          padding: 20px 20px 40px 20px;
-          font-weight: bold;
-          .groupname{
-            color: #ffffff;
-            font-size: 15px;
-            padding-bottom: 5px;
-          }
-          .newposts{
-            color: #ffffff;
-            font-size: 11px;
+    .formgroups{
+      height: calc(100vh - 100px);
+      overflow: scroll;
+      .forms{
+        height: 100px;
+        .block{
+          .group{
+            padding: 20px 20px 40px 20px;
+            font-weight: bold;
+            .groupname{
+              color: #ffffff;
+              font-size: 15px;
+              padding-bottom: 5px;
+            }
+            .newposts{
+              color: #ffffff;
+              font-size: 11px;
+            }
           }
         }
       }
@@ -62,7 +66,7 @@
   }
   // メイン
   .mainchat{
-    height: 100vh;
+    // height: 100vh;
     width:calc(100vw - 300px);
     float: right;
     // メインヘッダー
